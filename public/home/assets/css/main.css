@@ -90,7 +90,7 @@ a{
     outline:none!important
 }
 body{
-    background:#f1f1f1!important;
+    background: #ffffff!important;
 }
 .modal-header{
     background-color:#212529!important;
@@ -1603,7 +1603,7 @@ body{
 }
 .header_bg{
     background:#000;
-    border-bottom:4px solid #dd5645;
+    border-bottom: 4px solid #fcaf17;
     overflow-x:hidden;
     position:relative
 }
@@ -10589,7 +10589,7 @@ textarea.form-control-lg{
     display:table-cell!important
 }
 .d-flex{
-    display:flex!important
+    display:flex!important;
 }
 .d-inline-flex{
     display:inline-flex!important
@@ -10857,7 +10857,7 @@ textarea.form-control-lg{
     justify-content:center!important
 }
 .justify-content-between{
-    justify-content:space-between!important
+    justify-content:space-between!important;
 }
 .justify-content-around{
     justify-content:space-around!important
@@ -10872,7 +10872,7 @@ textarea.form-control-lg{
     align-items:flex-end!important
 }
 .align-items-center{
-    align-items:center!important
+    align-items:center!important;
 }
 .align-items-baseline{
     align-items:baseline!important
@@ -11448,8 +11448,8 @@ textarea.form-control-lg{
 }
 .bg-light{
     --bs-bg-opacity:1;
-    background-color:rgba(248,249,250,var(--bs-bg-opacity))!important;
-    background-color:rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important
+    /* background-color:rgba(248,249,250,var(--bs-bg-opacity))!important; */
+    /* background-color:rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important; */
 }
 .bg-dark{
     --bs-bg-opacity:1;
@@ -11460,7 +11460,7 @@ textarea.form-control-lg{
     --bs-bg-opacity:1;
     /* background-color:rgba(0,0,0,var(--bs-bg-opacity))!important; */
     background-color:rgba(var(--bs-black-rgb),var(--bs-bg-opacity))!important;
-    /* background: #fff; */
+    background: #fff !important;
 }
 .bg-white{
     --bs-bg-opacity:1;
@@ -14912,6 +14912,7 @@ h1.MuiTypography-root.MuiTypography-h5.css-1px8evw {
 }
 .css-1hg58ln.not-selected {
     box-shadow: none;
+    padding: 3px 10px;
 }
 .css-1hg58ln {
     border: none;
@@ -15106,7 +15107,7 @@ section.carss {
 }
 
 section.carss h2 {
-    color: #fff;
+    color: #1e1c1c;
     font-weight: 700;
 }
 
@@ -15117,10 +15118,12 @@ section.carss h2 {
 
 .view a {
     color: #fcaf17 !important;
+    font-weight: 700;
+    font-size: 22px;
 }
 
 p.para {
-    color: #fff;
+    color: #000;
     border-bottom-style: \;
     border-bottom: 1p;
     border-bottom: 1px solid #ccc;
@@ -15132,5 +15135,461 @@ p.para {
 
 section.carss .g-4.col-lg-3.col-md-6.col-12 {
     margin-bottom: 60px;
+}
+
+
+.css-id14lt .MuiAutocomplete-inputRoot .MuiAutocomplete-input:focus {
+    outline: unset;
+}
+.css-1hg58ln.not-selected:hover {
+    background: #fcaf17;
+    color: #fff;
+    border-radius: 15px;
+}
+.nvbar-expand-lg .nvbar-nav {
+    position: relative;
+    padding-top: 0;
+}
+.nvbar-expand-lg .nvbar-nav {
+    flex-direction: row;
+}
+.nvbar-expand-lg .nvbar-nav {
+    flex-direction: row;
+}
+.nvbar-expand-lg .nvbar-nav {
+    flex-direction: row;
+}
+.nvbar-expand-lg .nvbar-nav .nav-item {
+    border: 0;
+}
+.cs-header li, footer li {
+    list-style: none !important;
+}
+.dropdwn {
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+}
+.nvbar-nav>.nav-item>.dropdwn-toggle, .nvbar-nav>.nav-item>.dropdwn-toggle>a {
+    border: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 13px;
+
+}
+.nvbar-expand-lg .nvbar-nav .nav-link {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.nvbar-nav .first-link {
+    padding-left: 0 !important;
+}
+.nvbar-light .nvbar-nav .nav-link {
+    color: #4d4d4d;
+    font-size: 13px;
+}
+.nvbar-nav .nav-link {
+    padding: 0.875rem 0;
+}
+.nav-link {
+    transition: color .25s ease-in-out,background-color .25s ease-in-out,border-color .25s ease-in-out;
+    font-weight: 500;
+}
+.dropdwn-toggle {
+    white-space: nowrap;
+}
+.nvbar-nav li.dropdwn.nav-item a {
+    color: #000000 !important;
+    border: unset !important;
+    text-decoration: unset !important;
+    padding-left: 10px;
+}
+.nav-item .dropdwn-toggle::after {
+    margin-left: 0;
+    content: url(https://www.oneclickdrive.com/application/views/images/chevron-down.png) !important;
+    transform: scale(.15);
+    width: 14px;
+    height: 21px;
+    vertical-align: top;
+    display: inline-block;
+    font: normal normal normal 14px/1.6 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.dropdwn-toggle:not(.dropdwn-toggle-split)::after {
+    margin-right: 3px;
+}
+.nvbar-expand-lg .nvbar-nav .dropdwn-mnu {
+    position: absolute;
+}
+.dropdwn-mega {
+    left: -50px;
+}
+.nvbar-expand-lg .dropdwn-mnu {
+    margin-top: 0;
+    box-shadow: -0.0625rem 0 0.625rem 0 rgba(0,0,0,.07), 0.3125rem 1.25rem 2.5rem 0 rgba(0,0,0,.04);
+    border-color: #e9e9f2;
+    background-color: #fff;
+    border-color: #fff;
+}
+.nvbar-nav .dropdwn-mnu {
+    position: static;
+    float: none;
+}
+.nvbar-nav .dropdwn-mnu {
+    min-width: 14.5rem;
+    margin: 0;
+    margin-top: -0.5rem;
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    position: absolute !important;
+}
+.dropdwn-mega {
+    min-height: 400px;
+}
+.dropdwn-mnu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 99999;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: .865rem;
+    color: #4d4d4d;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e9e9f2;
+    border-radius: 0.75rem;
+    box-shadow: -0.0625rem 0 0.625rem 0 rgba(0,0,0,.07), 0.3125rem 1.25rem 2.5rem 0 rgba(0,0,0,.04);
+}
+
+.dropdwn-mnu li:last-child {
+    border-bottom: 0;
+}
+.cs-header li, footer li {
+    list-style: none !important;
+}
+.dropdwn-mega>li {
+    padding: 0 !important;
+}
+.roww {
+    /* display: -webkit-flex; */
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.m-0 {
+    margin: 0 !important;
+}
+.flex-lg-row {
+    flex-direction: row !important;
+}
+.flex-nowrap {
+    flex-wrap: nowrap !important;
+}
+.dropdwn-column.dropdwn-column-img {
+    margin-right: 0;
+    margin-left: -0.75rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dropdwn-mega .dropdwn-column.rounded-left {
+    padding-top: 0 !important;
+}
+.nvbar-expand-lg .dropdwn-mega .dropdwn-column {
+    display: block;
+    width: 15rem;
+    min-width: 15rem;
+}
+.nvbar-expand-lg .dropdwn-mega .dropdwn-column {
+    display: block;
+    width: 15rem;
+    min-width: 15rem;
+}
+.mnu-img-lft {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+}
+.mnu-img-lft {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+}
+aside.desktop-app {
+    position: relative;
+    z-index: 9999;
+    margin-top: -390px;
+    text-align: center;
+    width: 100%;
+}
+aside.desktop-app {
+    position: relative;
+    z-index: 9999;
+    margin-top: -390px;
+    text-align: center;
+    width: 100%;
+}
+aside.desktop-app {
+    position: relative;
+    z-index: 9999;
+    margin-top: -390px;
+    text-align: center;
+    width: 100%;
+}
+aside.desktop-app {
+    position: relative;
+    z-index: 9999;
+    margin-top: -390px;
+    text-align: center;
+    width: 100%;
+}
+.dropdwn:hover .dropdwn-mnu.dropdwn-mega {
+    display: block;
+    -webkit-animation: dropdwn-show .25s cubic-bezier(.68,-.55,.265,1.55);
+    animation: dropdwn-show .25s cubic-bezier(.68,-.55,.265,1.55);
+    padding-left: 17px;
+}
+
+ .dropdwn-mnu {
+    position: absolute;
+}
+
+.dropdwn-column {
+    display: block;
+    width: 15rem;
+    min-width: 15rem;
+}
+
+.dropdwn-column {
+    display: block;
+    padding: 20px 4px;
+}
+.dropdwn-column {
+    padding-top: 7px !important;
+}
+.dropdwn-mnu li.dropright.dropdwn:first-child {
+    margin-top: 0;
+}
+.dropdwn.nav-item a {
+    color: #4d4d4d;
+}
+.dropdwn-toggle {
+    position: relative;
+    padding-right: 1.625rem;
+}
+.mnu-click-style {
+    width: 100%;
+    display: flex;
+}
+.dropdwn-mnu .dropdwn-mnu {
+    top: 0;
+    right: auto;
+    left: 100%;
+    width: auto;
+    margin-top: -0.5rem;
+    margin-right: 0;
+    margin-left: -0.25rem;
+    padding-right: 0;
+    padding-left: 0;
+    border-radius: 0.75rem;
+    background-color: #fff;
+}
+body .dropdwn-mnu {
+    margin-top: 0;
+    box-shadow: -0.0625rem 0 0.625rem 0 rgba(0,0,0,.07), 0.3125rem 1.25rem 2.5rem 0 rgba(0,0,0,.04) !important;
+    border-color: #e9e9f2 !important;
+    background-color: #fff !important;
+    border-color: #fff !important;
+}
+
+.nvbar-expand-lg .dropdwn-mnu .dropdwn-toggle::after {
+    top: 0!important;
+}
+.nvbar-expand-lg .dropdwn-mnu .dropdwn-toggle::after {
+    position: absolute;
+    top: 12%;
+    right: 1.2rem;
+    margin-top: 0.0625rem;
+    transform: translateY(-50%);
+    content: url(https://www.oneclickdrive.com/application/views/images/chevron-right.svg);
+    transform: scale(.55);
+}
+.dropdwn-toggle:not(.dropdwn-toggle-split)::after {
+    margin-right: 3px;
+}
+
+
+.dropdwn-column li {
+    list-style: none !important;
+}
+
+.dropdwn-mnu li {
+    margin-bottom: 0;
+    border-bottom: solid 1px #f2f2f2;
+}
+.dropdwn-item {
+    display: block;
+    width: 100%;
+    padding: .425rem 1.3rem;
+    clear: both;
+    font-weight: 400;
+    color: #4d4d4d;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0
+}
+@media(max-width: 1025px) {
+    .carslid.hdbeyondcar {
+        width:100%;
+        padding-right: 0 !important;
+        margin: 0 auto 30px;
+        width: 100%;
+        margin: 0 auto 30px
+    }}
+
+.nvbar-nav .nav-item .dropdwn-toggle::after {
+    margin-left: 0;
+    content: url(https://www.oneclickdrive.com/application/views/images/chevron-down.png) !important;
+    transform: scale(.15);
+    width: 14px;
+    height: 21px;
+    vertical-align: top;
+    display: inline-block;
+    font: normal normal normal 14px/1.6 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+
+
+body ul.dropdwn-mnu a {
+    /* padding-left: 20px !important; */
+}
+
+ul.listinlin {
+    padding-left: 20px;
+}
+
+ul.dropdwn-mnu {
+    display: none;
+}
+
+ul.listinlin li:hover .dropdwn-mnu {
+    display: block !important;
+}
+
+ul.listinlin a {
+    padding-left: 0 !important;
+}
+
+ul.dropdwn-mnu {
+    padding-left: 20px !important;
+}
+
+ul.dropdwn-mnu.dropdwn-mega.p-0.mt-0.mt-md-20 {
+    padding-left: 0 !important;
+}
+h5.auction-card-title.fw-bold.text-uppercase.pt-3 {
+    color: #000 !important;
+    padding-top: 5px !important;
+}
+
+button.text-light.btn.btn-link {
+    filter: brightness(0);
+}
+li.dropdwn.nav-item {
+    display: inline-block;
+}
+
+ul#mnu-primary-mnu {
+    /* border-bottom: 2px solid #fcaf17; */
+    background: #f9f9f9ba;
+}
+
+.px-1.text-uppercase.rounded {
+    background: #fcaf17 !important;
+}
+.cutpr {
+    height: 22px;
+    font-size: .9rem !important;
+}
+.text-orange {
+    color: #ffb92f;
+    font-weight: 600;
+}
+.roww {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.justbet {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+.p-0 {
+    padding: 0 !important;
+    margin-top: 11px;
+}
+.m-b-10 {
+    margin-bottom: 10px !important;
+}
+
+.car-bid-shareMark.d-flex.align-items-center.justify-content-between {
+    display: block !important;
+}
+
+.f-13 {
+    font-size: 13px !important;
+}
+.car-shareMark {
+    position: absolute;
+    margin-top: -5px;
+}
+
+i.fa-solid.fa-share-nodes {
+    color: #000;
+}
+
+::before {}
+
+i.fa-regular.fa-bookmark {
+    color: #000;
+}
+img.me-1l {
+    max-width: 90px;
+    margin-right: 25px;
 }
 
