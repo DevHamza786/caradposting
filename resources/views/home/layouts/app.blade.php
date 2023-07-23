@@ -65,7 +65,7 @@
                         <li>
                            <div class="flex-column flex-lg-row flex-nowrap roww m-0">
                               <div class="p-0 rounded-left dropdwn-column dropdwn-column-img bg-secondary d-none d-lg-block">
-                                 <img loading="lazy" alt="OCD menu" title="UAE's no. 1 car rental &amp; leasing marketplace" src="https://www.oneclickdrive.com/application/views/images/menu-img.jpg?v=1" class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
+                                 <img loading="lazy" alt="OCD menu" title="UAE's no. 1 car rental &amp; leasing marketplace" src="/public/adpost/images/c7.jpg" class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
                                  <aside class="desktop-app">
                                     <!-- new changes start -->
                                     <span class="f-20 font-bold text-center downloadapptext">
@@ -147,7 +147,7 @@
                         <li>
                            <div class="flex-column flex-lg-row flex-nowrap roww m-0">
                               <div class="p-0 rounded-left dropdwn-column dropdwn-column-img bg-secondary d-none d-lg-block">
-                                 <img loading="lazy" alt="OCD menu" title="UAE's no. 1 car rental &amp; leasing marketplace" src="https://www.oneclickdrive.com/application/views/images/menu-img.jpg?v=1" class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
+                                 <img loading="lazy" alt="OCD menu" title="UAE's no. 1 car rental &amp; leasing marketplace" src="/public/adpost/images/b1.jpg" class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
                                  <aside class="desktop-app">
                                     <!-- new changes start -->
                                     <span class="f-20 font-bold text-center downloadapptext">
@@ -229,7 +229,7 @@
                        <li>
                           <div class="flex-column flex-lg-row flex-nowrap roww m-0">
                              <div class="p-0 rounded-left dropdwn-column dropdwn-column-img bg-secondary d-none d-lg-block">
-                                <img loading="lazy" alt="OCD menu" title="UAE's no. 1 car rental &amp; leasing marketplace" src="https://www.oneclickdrive.com/application/views/images/menu-img.jpg?v=1" class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
+                                <img loading="lazy" alt="OCD menu" title="UAE's no. 1 car rental &amp; leasing marketplace" src="/public/adpost/images/y1.jpg" class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
                                 <aside class="desktop-app">
                                    <!-- new changes start -->
                                    <span class="f-20 font-bold text-center downloadapptext">
@@ -311,7 +311,7 @@
                        <li>
                           <div class="flex-column flex-lg-row flex-nowrap roww m-0">
                              <div class="p-0 rounded-left dropdwn-column dropdwn-column-img bg-secondary d-none d-lg-block">
-                                <img loading="lazy" alt="OCD menu" title="UAE's no. 1 car rental &amp; leasing marketplace" src="https://www.oneclickdrive.com/application/views/images/menu-img.jpg?v=1" class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
+                                <img loading="lazy" alt="OCD menu" title="UAE's no. 1 car rental &amp; leasing marketplace" src="/public/adpost/images/t4.jpg" class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
                                 <aside class="desktop-app">
                                    <!-- new changes start -->
                                    <span class="f-20 font-bold text-center downloadapptext">
