@@ -31,13 +31,20 @@ class HomeController extends Controller
         return view('home.index', compact('users'));
     }
 
+
+    public function cat()
+    {
+        $users = AdPost::limit(6)->get();
+        return view('home.categorypage', compact('users'));
+    }
+
     public function alladds($type)
     {
         if ($type != 'cars' && $type != 'bike'){
             abort(404);
         }else{
             $typeID = PostType::select('id')->where('name',$type)->first();
-            $users = AdPost::where('type_id', $typeID->id)->where('status', 'approved')->get(); 
+            $users = AdPost::where('type_id', $typeID->id)->where('status', 'approved')->get();
             return view('home.categorypage', compact('users'));
         }
     }

@@ -28,6 +28,7 @@ use App\Http\Controllers\Auth\LoginController;
 
 
 Route::get('/', [HomeController::class,'index'])->name('home');
+Route::get('/cat', [HomeController::class,'cat'])->name('categorypage');
 Route::get('/post/{type}', [HomeController::class,'alladds'])->name('home.categorypage');
 Route::get('/view-post/{id}', [HomeController::class,'show'])->name('home.showpage');
 
