@@ -28,7 +28,8 @@ return new class extends Migration
             $table->string('price_per_month')->nullable();
             $table->string('feature_image')->nullable();
             $table->string('premium_add')->nullable();
-            $table->enum('status',['active','pending','approved','unactive'])->default('pending')->nullable();
+            $table->enum('admin_apporval',['rejected','pending','approved'])->default('pending')->nullable();
+            $table->enum('status',['active','unactive'])->default('unactive')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

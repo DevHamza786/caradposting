@@ -41,8 +41,9 @@
                     <th>Model</th>
                     <th>City</th>
                     <th>Price</th>
-                    {{-- <th>Is Premium?</th> --}}
+                    <th>Is Premium?</th>
                     <th>Status</th>
+                    <th>Admin Approval</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -56,19 +57,30 @@
                     <td>{{ $data->user->name }}</td>
                     @endhasrole
                     <td>{{ $data->title }}</td>
-                    <td>{{ $data->type->name }}</td>
-                    <td>{{ $data->category->name }}</td>
-                    <td>{{ $data->model }}</td>
+                    <td>{{ ucwords($data->type->name) }}</td>
+                    <td>{{ ucwords($data->category->name) }}</td>
+                    <td>{{ ucwords($data->models->name) }}</td>
                     <td>{{ $data->city->name }}</td>
-                    {{-- <td>{{ $data->is_primium }}</td> --}}
-                    <td>{{ $data->price_per_day }}</td>
                     <td>
-                        @if ($data->status == 'pending')
+                        {{ $data->price_per_day.' /per day' }} <br>
+                        {{ $data->price_per_week.' /per week' }} <br>
+                        {{ $data->price_per_month.' /per month' }}
+                    </td>
+                    <td>{{ ($data->premium_add == null) ? 'No' : 'Yes' }}</td>
+                    <td>
+                        @if ($data->status == 'active')
+                        <span class="badge badge-light-success">active</span>
+                        @elseif($data->status == 'unactive')
+                        <span class="badge badge-light-danger">unactive</span>
+                        @endif
+                    </td>
+                    <td>
+                        @if ($data->admin_apporval == 'pending')
                         <span class="badge badge-light-warning">Pending</span>
-                        @elseif($data->status == 'active')
-                        <span class="badge badge-light-success">Active</span>
-                        @else
-                        <span class="badge badge-light-primary">Approved</span>
+                        @elseif($data->status == 'apporved')
+                        <span class="badge badge-light-success">Approved</span>
+                        @elseif($data->status == 'rejected')
+                        <span class="badge badge-light-danger">Rejected</span>
                         @endif
                     </td>
                     @hasrole('customer')
@@ -93,7 +105,7 @@
 @section('script_page')
 <script>
 $('.post_status').click(function() {
-
+    alert('dasd');
     var id = $(this).data('id');
     $.ajax({
         url: '/admin/edit-adpost/' + id,

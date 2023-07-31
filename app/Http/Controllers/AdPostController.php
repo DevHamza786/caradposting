@@ -41,9 +41,9 @@ class AdPostController extends Controller
     public function index(){
 
         $data['page_slug'] = request()->route()->uri();
-        $data['category'] = Category::get();
-        $data['models'] = AdModel::get();
-        $data['city'] = City::get();
+        // $data['category'] = Category::get();
+        // $data['models'] = AdModel::get();
+        // $data['city'] = City::get();
         $data['post'] = AdPost::where('user_id', auth()->user()->id)->get();
         return view('panel.adpost.index' , $data);
     }

@@ -2,9 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\AdModel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class AdPost extends Model
 {
@@ -25,6 +26,10 @@ class AdPost extends Model
 
     public function type(){
         return $this->belongsTo(PostType::class);
+    }
+
+    public function models(){
+        return $this->belongsTo(AdModel::class , 'model', 'id');
     }
 
 }

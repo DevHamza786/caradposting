@@ -7,7 +7,8 @@
         }
 
         .feature-image-preview img,
-        .company-image-preview img {
+        .company-image-preview img,
+            {
             display: block;
             max-width: 100%;
             height: auto;
@@ -50,6 +51,28 @@
             border-radius: 50px;
             background: #f2f2f2;
             cursor: pointer;
+        }
+
+        .relative-cancel-icon {
+            position: absolute;
+            top: -10px;
+            right: -15px;
+            padding: 0px 10px;
+            font-size: 25px;
+            border: #f2f2f2 solid 2px;
+            border-radius: 50px;
+            background: #f2f2f2;
+            cursor: pointer;
+        }
+
+        /* Optional: Add styling for the image container */
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 5px;
         }
     </style>
 @endsection
@@ -222,7 +245,7 @@
 
 
                         <!--begin::Input group-->
-                        <div class="fv-row mb-15">
+                        <div class="fv-row mb-7">
                             <!--begin::Label-->
                             <label class="fs-6 fw-bold mb-2">
                                 <span class="required">Description</span>
@@ -234,7 +257,7 @@
                         </div>
                         <!--end::Input group-->
                         <!--begin::Input group-->
-                        <div class="fv-row mb-15">
+                        <div class="fv-row mb-7">
                             <!--begin::Label-->
                             <label class="fs-6 fw-bold mb-2">
                                 <span class="required">Feature Image</span>
@@ -249,7 +272,7 @@
                         <!--end::Input group-->
 
                         <!--begin::Input group-->
-                        <div class="fv-row mb-15">
+                        <div class="fv-row mb-7">
                             <!--begin::Label-->
                             <label class="fs-6 fw-bold mb-2">
                                 <span class="required">Relative Images</span>
@@ -257,7 +280,7 @@
                             <!--end::Label-->
                             <!--begin::Input-->
                             <input type="file" class="form-control form-control-solid" placeholder="" name="images[]"
-                                multiple>
+                                multiple accept="image/jpeg, image/png, image/jpg">
                             <div class="relative-images-preview"></div>
                             <!--end::Input-->
                         </div>
@@ -415,56 +438,6 @@
             }
         });
 
-        // For relative images
-        // $('input[name="images[]"]').on('change', function() {
-        //     var input = $(this)[0];
-        //     var imagePreview = $('.relative-images-preview');
-
-        //     // Clear previous image previews
-        //     imagePreview.html('');
-
-        //     // Check if files are selected
-        //     if (input.files && input.files.length > 0) {
-        //         // Read and display each selected image
-        //         for (var i = 0; i < input.files.length; i++) {
-        //             var reader = new FileReader();
-        //             var file = input.files[i];
-        //             console.log(input.files[i]);
-
-        //             // Closure to capture the file information
-        //             reader.onload = (function(file) {
-        //                 return function(e) {
-        //                     // Create an image element and set the source, width, and height
-        //                     var image = $('<img>');
-        //                     image.attr('src', e.target.result);
-        //                     image.attr('width', '200'); // Set the desired width
-        //                     image.attr('height', '200'); // Set the desired height
-
-        //                     // Create a container for the image and cancel icon
-        //                     var container = $('<div class="image-container"></div>');
-        //                     container.append(image);
-
-        //                     // Create the cancel icon and attach a click event
-        //                     var cancelIcon = $('<span class="cancel-icon">&times;</span>');
-        //                     cancelIcon.on('click', function() {
-        //                         // Remove the image container when the cancel icon is clicked
-        //                         container.remove();
-        //                     });
-        //                     container.append(cancelIcon);
-
-        //                     // Append the image container to the preview container
-        //                     imagePreview.append(container);
-        //                 };
-        //             })(file);
-
-        //             // Read the selected file as a data URL
-        //             reader.readAsDataURL(file);
-        //         }
-        //     }
-        // });
-
-
-
         $('input[name="company_logo"]').on('change', function() {
             var input = $(this)[0];
             var imagePreview = $('.company-image-preview');
@@ -508,6 +481,70 @@
 
                     // Read the selected file as a data URL
                     reader.readAsDataURL(input.files[i]);
+                }
+            }
+        });
+
+        // For relative images
+        // Your JavaScript code
+        $('input[name="images[]"]').on('change', function() {
+            var input = $(this)[0];
+            var imagePreview = $('.relative-images-preview');
+
+            // Clear previous image previews
+            imagePreview.html('');
+
+            // Check if files are selected
+            if (input.files && input.files.length > 0) {
+                // Store the selected files in a variable
+                var selectedFiles = input.files;
+
+                // Read and display each selected image
+                for (var i = 0; i < selectedFiles.length; i++) {
+                    var reader = new FileReader();
+                    var file = selectedFiles[i];
+
+                    // Closure to capture the file information
+                    reader.onload = (function(file) {
+                        return function(e) {
+                            var image = $('<img>');
+                            image.attr('src', e.target.result);
+                            image.attr('width', '200'); // Set the desired width
+                            image.attr('height', '200'); // Set the desired height
+
+                            var container = $('<div class="image-container"></div>');
+                            container.append(image);
+
+                            var cancelIcon = $('<span class="relative-cancel-icon">&times;</span>');
+                            cancelIcon.on('click', function() {
+                                // Remove the image container when the cancel icon is clicked
+                                container.remove();
+
+                                // Create a new FileList without the removed file
+                                var newFileList = new DataTransfer();
+                                for (var j = 0; j < selectedFiles.length; j++) {
+                                    if (selectedFiles[j] !== file) {
+                                        newFileList.items.add(selectedFiles[j]);
+                                    }
+                                }
+
+                                // Create a new input element with the updated FileList
+                                var newInput = $(
+                                    '<input type="file" class="form-control form-control-solid" placeholder="" name="images[]" multiple>'
+                                    );
+                                newInput[0].files = newFileList.files;
+
+                                // Replace the original input with the new input
+                                $(input).replaceWith(newInput);
+                            });
+
+                            container.append(cancelIcon);
+                            imagePreview.append(container);
+                        };
+                    })(file);
+
+                    // Read the selected file as a data URL
+                    reader.readAsDataURL(file);
                 }
             }
         });
