@@ -13,6 +13,14 @@ use Illuminate\Http\Request;
 class AdPostController extends Controller
 {
 
+    public function __construct() {
+        // Check if the user's number is not set
+        if (!isset($_SESSION['phone'])) {
+            header("Location: /profile"); // Redirect to the profile route
+            exit; // Stop further execution
+        }
+    }
+
     public function adminIndex(){
 
         $data['page_slug'] = 'ad-post';

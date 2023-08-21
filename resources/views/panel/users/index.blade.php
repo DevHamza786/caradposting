@@ -22,7 +22,7 @@
                         <td>{{ $data->name }}</td>
                         <td>{{ $data->email }}</td>
                         <td>{{ $data->phone ?? '' }}</td>
-                        <td>{{ $data->email_verified_at	 }}</td>
+                        <td>{{ isset($data->email_verified_at) ? 'Yes' : 'No' }}</td>
                         <td>{{ ($data->subscription  == 0) ? 'No' : 'Yes' }}</td>
                         {{-- <td>
                             <i class="bi bi-pencil-square fs-2x text-success"></i>

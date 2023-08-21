@@ -9,3 +9,8 @@ function menuType($type){
     return $cat;
 }
 
+
+function decryptPassword($encryptedPassword) {
+    return decrypt($encryptedPassword);
+}
+

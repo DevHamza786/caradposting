@@ -10,6 +10,7 @@ use App\Http\Controllers\AdModelController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/update-models', [AdModelController::class,'update'])->name('models.update');
     Route::get('/model-type/{id}', [AdModelController::class,'postType'])->name('model.type');
 
+    // For Profile
+    Route::get('/profile', [ProfileController::class,'index'])->name('profile');
+    Route::post('/profile-update', [ProfileController::class,'update'])->name('profile.update');
 
 
     Route::get('/users', [UserController::class,'index'])->name('users');
