@@ -10,6 +10,7 @@ use App\Http\Controllers\AdModelController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\StaticPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,11 @@ use App\Http\Controllers\Auth\LoginController;
 
 
 Route::get('/', [HomeController::class,'index'])->name('home');
+Route::get('/about-us', [StaticPageController::class,'about_us'])->name('about_us');
+Route::get('/contact-us', [StaticPageController::class,'contact_us'])->name('contact_us');
+Route::get('/privacy-policy', [StaticPageController::class,'privacy_policy'])->name('privacy_policy');
+Route::get('/terms-conditions', [StaticPageController::class,'terms_conditions'])->name('terms_conditions');
+Route::get('/renting-guide', [StaticPageController::class,'renting_guide'])->name('renting_guide');
 Route::get('/cat', [HomeController::class,'cat'])->name('categorypage');
 Route::get('/post/{type}', [HomeController::class,'alladds'])->name('home.categorypage');
 Route::get('/view-post/{id}', [HomeController::class,'show'])->name('home.showpage');

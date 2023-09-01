@@ -4,8 +4,7 @@
         <div class="container">
             <div class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-direction-xs-column MuiGrid-grid-xs-12 css-rjsjy0"
                 style="background-size:cover;min-height:257px;border-radius:6px">
-                <h1 class="MuiTypography-root MuiTypography-h5 css-1px8evw" data-testid="hero-title">The best place to rent
-                    your car, motorbike and yatch in Dubai</h1>
+                <h1 class="MuiTypography-root MuiTypography-h5 css-1px8evw" data-testid="hero-title">Find Your Perfect Ride With Sayjar</h1>
                 <div class="MuiBox-root css-1sido8c">
                     <div class="MuiBox-root css-70qvj9">
 
@@ -24,9 +23,10 @@
                                                     placeholder="Search for anything" type="text"
                                                     class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1bjlmdj"
                                                     aria-autocomplete="list" aria-expanded="false" autocapitalize="none"
-                                                    spellcheck="false" role="combobox" value=""><img
+                                                    spellcheck="false" role="combobox" value="">
+                                                    <img
                                                     class="MuiBox-root css-19rsff" alt="Search"
-                                                    src="https://dbzproperty-a.akamaihd.net/frontend-web/listings/assets/homepage/search.svg">
+                                                    src="/home/assets/images/search.svg">
                                                 <fieldset aria-hidden="true"
                                                     class="MuiOutlinedInput-notchedOutline css-igs3ac">
                                                     <legend class="css-hdw1oc"><span
@@ -40,7 +40,8 @@
                         </div>
                         <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-md-2 css-11w2184"><button
                                 class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-nzmd8g"
-                                tabindex="0" type="button" data-testid="search-button">Search</button></div>
+                                tabindex="0" type="button" data-testid="search-button">Search 
+                                <img class="MuiBox-root css-19rsff nones" alt="Search" src="/home/assets/images/search.svg"></button></div>
                     </div>
                 </div>
             </div>
@@ -258,7 +259,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="main-h2">Latest Car Rental Offers in Dubai</h2>
+                    <h2 class="main-h2">Latest Car Rental's in Oman</h2>
                 </div>
 
                 <div class="col-md-6">
@@ -464,7 +465,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="main-h2">Latest Bikes Rental Offers in Dubai</h2>
+                    <h2 class="main-h2">Latest Bikes Rental's in Oman</h2>
                 </div>
 
                 <div class="col-md-6">
@@ -670,7 +671,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="main-h2">Latest Yacht/Ships Rental Offers in Dubai</h2>
+                    <h2 class="main-h2">Latest Yacht/Ships Rental's in Oman</h2>
                 </div>
 
                 <div class="col-md-6">
@@ -879,7 +880,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="main-h2">Latest Trucks Rental Offers in Dubai</h2>
+                    <h2 class="main-h2">Latest Trucks Rental's in Oman</h2>
                 </div>
 
                 <div class="col-md-6">

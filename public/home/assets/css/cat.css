@@ -1139,7 +1139,8 @@ a.sectrl {
 }
 
 .covidinfobox button:focus,.covidinfobox button:hover,.covidinfobox:after,.covidinfobox:before,.text-white,.view-all-btn2:hover i {
-    color: #fff !important
+    color: #000 !important;
+    margin-top: 11px;
 }
 
 .text-green {
@@ -3307,7 +3308,7 @@ h1 {
 }
 
 .accordion:hover,.active,.enqform .round label,.panel {
-    background-color: #fff
+    /* background-color: #fff; */
 }
 
 @media(min-width: 730px) {
@@ -5286,7 +5287,7 @@ video#sup_vid {
 }
 
 .rate:not(:checked)>label:before {
-    content: '★'
+    content: 'â˜…'
 }
 
 .rate>input:checked ~ label {
