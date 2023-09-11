@@ -27,11 +27,7 @@
                                                     <img
                                                     class="MuiBox-root css-19rsff" alt="Search"
                                                     src="/home/assets/images/search.svg">
-                                                <fieldset aria-hidden="true"
-                                                    class="MuiOutlinedInput-notchedOutline css-igs3ac">
-                                                    <legend class="css-hdw1oc"><span
-                                                            class="notranslate">&ZeroWidthSpace;</span></legend>
-                                                </fieldset>
+                                            
                                             </div>
                                         </div>
                                     </div>

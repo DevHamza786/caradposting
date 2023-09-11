@@ -14,9 +14,8 @@
       --}}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Seven Car Lounge</title>
-    <script defer="defer" src="{{ asset('home/assets/js/main.7a4af184.js') }}"></script>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <link href="{{ asset('home/assets/css/main.css') }}" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link href="{{ asset('home/assets/css/main.css?ver=1') }}" rel="stylesheet">
     <link href="{{ asset('home/assets/css/cat.css') }}" rel="stylesheet">
 </head>
 
@@ -28,7 +27,7 @@
                 <div>
                     <div class="mobil_device row"><i class="fa-solid fa-bars"></i></div>
                     <div class="Nav_row row">
-                        <div class="col-md-7">
+                        <div class="col-md-5">
                             <div class="logo_search">
                                 <div class="logo"><a href="/"><img class="img-fluid"
                                             src="{{ asset('home/assets/images/logo.png') }}" alt="Site Logo"></a></div>
@@ -43,16 +42,33 @@
                                     href="{{ route('login') }}"><button class="f-m fw-bolder">Login</button></a>
                                    
                                 <a href="#">
-                                    <!--<select class="f-m fw-bolder">-->
-                                    <!--    <option>En</option>-->
-                                    <!--    <option>Ar</option>-->
-                                    <!--</select>-->
+                                    
                                     <div class="gtranslate_wrapper"></div>
 <script>window.gtranslateSettings = {"default_language":"en","languages":["en","ar"],"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
                                 </a>
+                       
                             </div>
                         </div>
+                          <div class="col-md-2 ">
+                                 <div class="cities">
+<div class="dropdown">
+            <button class="dropbtn">
+                Countries<img src="/home/assets/images/arrow-down-sign-to-navigate.png">
+            </button>
+              
+            <div class="dropdown-content">
+                <a href="#"><img src="/home/assets/images/oman.png"width="20" height="15"> Oman</a>
+                <a href="javascript:;" class="vb"><img src="/home/assets/images/united-arab-emirates.png"width="20" height="15"> Uae (Comming soon)</a>
+                <a href="javascript:;" class="vb"><img src="/home/assets/images/qatar.png"width="20" height="15"> Qatar (Comming soon)</a>
+                <a href="javascript:;" class="vb"><img src="/home/assets/images/saudi-arabia.png"width="20" height="15"> Saudia (Comming soon)</a> 
+                    <a href="javascript:;" class="vb"><img src="/home/assets/images/bahrain.png"width="20" height="15"> Bahrain (Comming soon)</a>
+                <a href="javascript:;" class="vb"><img src="/home/assets/images/kuwait.png"width="20" height="15"> Kuwait (Comming soon)</a>
+
+            </div>
+        </div>
+
+                                </div></div>
                     </div>
                     <div class="row"></div>
                 </div>
@@ -301,8 +317,6 @@
     </div>
     </div>
 
-<script>
-    $(document).ready(function(){$("#show_less").click(function(){$(".otherlinksqik").toggle(),$(".otherlinksqik").toggleClass("ani"),$(".viewmor").toggleClass("dnone"),$(".show-more-less .fa").toggleClass("showls")})});for(var acc=document.getElementsByClassName("accordion"),i=0;i<acc.length;i++)acc[i].addEventListener("click",function(){this.classList.toggle("active");var n=this.nextElementSibling;n.style.maxHeight?n.style.maxHeight=null:n.style.maxHeight=n.scrollHeight+"%"});$(function(){function n(n,t){this.el=n||{},this.multiple=t||!1,this.el.find(".bukfiltitle").on("click",{el:this.el,multiple:this.multiple},this.dropdwn)}n.prototype.dropdwn=function(n){var t=n.data.el;$this=$(this),$next=$this.next(),$next.slideToggle(),$this.parent().toggleClass("open"),n.data.multiple||t.find(".submnu").not($next).slideUp().parent().removeClass("open")},new n($(".aconfil"),!1)}),$(".sortboxmn input:checkbox").on("click",function(){var n,t=$(this);t.is(":checked")?(n="input:checkbox[name='"+t.attr("name")+"']",$(n).prop("checked",!1),t.prop("checked",!0)):t.prop("checked",!1)}),$(".sortboxmn .srtlnk ").click(function(){$(".sortboxmn .srtlnk.selected").removeClass("selected"),$(this).addClass("selected")}),$(".sortboxmn input").click(function(){($(".sortboxmn .srtlnk").hasClass("selected")?$(".sortboxmn .srtlnk"):$(".sortboxmn .srtlnk.selected")).removeClass("selected")});var modal1=document.getElementById("sorting-bar"),bttn=document.getElementById("sortlink"),spans=document.getElementsByClassName("sortcl")[0];bttn.onclick=function(){modal1.style.display="block",modal1.classList.add("in")},spans.onclick=function(){modal1.style.display="none",modal1.classList.remove("in")},window.onclick=function(n){n.target==modal&&(modal1.style.display="none",modal1.classList.remove("in"))};var modal=document.getElementById("myModal"),span=(bttn=document.getElementById("filterlink"),document.getElementsByClassName("cls")[0]);bttn.onclick=function(){modal.style.display="block",modal.classList.add("in")},span.onclick=function(){modal.style.display="none",modal.classList.remove("in")},window.onclick=function(n){n.target==modal&&(modal.style.display="none",modal.classList.remove("in"))};var findcar=document.getElementById("findmcar"),bttn=document.getElementById("findmeacarbtn"),span=document.getElementsByClassName("fincarclose")[0];bttn.onclick=function(){findcar.style.display="flex"},span.onclick=function(){findcar.style.display="none"},window.onclick=function(n){n.target==modale&&(findcar.style.display="none")};var modale=document.getElementById("enquirymodal"),bttn=document.getElementById("mailenqbtn"),span=document.getElementsByClassName("enqclose")[0];bttn.onclick=function(){modale.style.display="flex"},span.onclick=function(){modale.style.display="none"},window.onclick=function(n){n.target==modale&&(modale.style.display="none")},$(function(){$(".faqbottom .accordion").click(function(){$(this).toggleClass("hit")})}),$(document).ready(function(){$(".mailbox").click(function(){$("html").addClass("noscroll")}),$(".enqclose").click(function(){$("html").removeClass("noscroll")}),$(".modal").click(function(){$("html").removeClass("noscroll")}),$(".stickybttnsortfil").click(function(){$("html").addClass("noscroll")}),$(".sortcl").click(function(){$("html").removeClass("noscroll")}),$(".cls").click(function(){$("html").removeClass("noscroll")}),$("#findmeacarbtn").click(function(){$("html").addClass("noscroll")}),$(".fincarclose").click(function(){$("html").removeClass("noscroll")})}),$(window).resize(function(){var n;($(window).width()<730||$(window).height()<1030)&&(window.onscroll=function(){window.pageYOffset>=n?document.getElementById("hidesortfiltab").style.display="none ":document.getElementById("hidesortfiltab").style.display="flex "},n=document.getElementById("hidfilter").offsetTop)});var modalsup=document.getElementById("mbsuploc"),span=(bttn=document.getElementById("mbsuploctop"),document.getElementsByClassName("clss")[0]);bttn.onclick=function(){modalsup.style.display="block",modalsup.classList.add("in")},span.onclick=function(){modalsup.style.display="none",modalsup.classList.remove("in")},window.onclick=function(n){n.target==modalsup&&(modalsup.style.display="none",modalsup.classList.remove("in"))},$(document).ready(function(){$("#mbsuploctop").click(function(){$("html, body").addClass("overflow-hidden")}),$(".clss").click(function(){$("html, body").removeClass("overflow-hidden")}),$(".modal").click(function(){$("html, body").removeClass("overflow-hidden")})});
-    </script>
+
 
 </html>
