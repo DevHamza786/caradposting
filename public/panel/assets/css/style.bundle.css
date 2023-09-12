@@ -18855,7 +18855,7 @@ fieldset:disabled .btn {
         width: 950px !important;
     }
     .w-xl-1000px {
-        width: 1000px !important;
+        width: 50%!important;
     }
     .mw-xl-unset {
         max-width: unset !important;
@@ -25503,7 +25503,7 @@ fieldset:disabled .btn {
         flex: 1 0 auto;
     }
     .flex-lg-row-auto {
-        flex: 0 0 auto;
+        /* flex: 0 0 auto; */
     }
     .flex-lg-row-fluid {
         flex: 1 auto;
