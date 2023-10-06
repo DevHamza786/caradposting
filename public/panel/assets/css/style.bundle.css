@@ -49321,3 +49321,21 @@ body {
     background-color: #fff;
     border: 0;
 }
+
+.profile-image-label {
+  display: block;
+  width: 150px; /* Set your preferred dimensions */
+  height: 150px;
+  border-radius: 50%; /* Create a circular shape */
+  overflow: hidden; /* Hide overflowing parts */
+  position: relative;
+  cursor: pointer; /* Make it look clickable */
+  background: #f2f2f2;
+  border: 4px solid #a5a0a0;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}

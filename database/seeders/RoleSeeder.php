@@ -23,7 +23,7 @@ class RoleSeeder extends Seeder
             ],
             [
                 'name' => 'customer',
-                'guard_name' => 'web'   
+                'guard_name' => 'web'
             ]
         ];
 
@@ -34,6 +34,7 @@ class RoleSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => Hash::make('1234567890'),
             'email_verified_at' => now(),
+            'phone' => '123456789',
         ]);
 
         $user->assignRole('admin');

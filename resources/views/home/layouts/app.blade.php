@@ -20,7 +20,7 @@
 </head>
 
 <body>
-   
+
     <div id="root">
         <div class="bg-black">
             <div class="header_bg">
@@ -40,14 +40,14 @@
                                         style="background: #fcaf17;">Rent with us</button></a>
                                         <a
                                     href="{{ route('login') }}"><button class="f-m fw-bolder">Login</button></a>
-                                   
+
                                 <a href="#">
-                                    
+
                                     <div class="gtranslate_wrapper"></div>
 <script>window.gtranslateSettings = {"default_language":"en","languages":["en","ar"],"wrapper_selector":".gtranslate_wrapper"}</script>
 <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
                                 </a>
-                       
+
                             </div>
                         </div>
                           <div class="col-md-2 ">
@@ -56,12 +56,12 @@
             <button class="dropbtn">
                 Countries<img src="/home/assets/images/arrow-down-sign-to-navigate.png">
             </button>
-              
+
             <div class="dropdown-content">
                 <a href="#"><img src="/home/assets/images/oman.png"width="20" height="15"> Oman</a>
                 <a href="javascript:;" class="vb"><img src="/home/assets/images/united-arab-emirates.png"width="20" height="15"> Uae (Comming soon)</a>
                 <a href="javascript:;" class="vb"><img src="/home/assets/images/qatar.png"width="20" height="15"> Qatar (Comming soon)</a>
-                <a href="javascript:;" class="vb"><img src="/home/assets/images/saudi-arabia.png"width="20" height="15"> Saudia (Comming soon)</a> 
+                <a href="javascript:;" class="vb"><img src="/home/assets/images/saudi-arabia.png"width="20" height="15"> Saudia (Comming soon)</a>
                     <a href="javascript:;" class="vb"><img src="/home/assets/images/bahrain.png"width="20" height="15"> Bahrain (Comming soon)</a>
                 <a href="javascript:;" class="vb"><img src="/home/assets/images/kuwait.png"width="20" height="15"> Kuwait (Comming soon)</a>
 
@@ -88,9 +88,9 @@
                                         class="p-0 rounded-left dropdwn-column dropdwn-column-img bg-secondary d-none d-lg-block">
                                         <img loading="lazy" alt="OCD menu"
                                             title="UAE's no. 1 car rental &amp; leasing marketplace"
-                                            src="/public/adpost/images/c7.jpg"
+                                            src="/adpost/images/c7.jpg"
                                             class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
-                                
+
                                     </div>
                                     <div class="dropdwn-column">
                                         <nav>
@@ -123,9 +123,9 @@
                                         class="p-0 rounded-left dropdwn-column dropdwn-column-img bg-secondary d-none d-lg-block">
                                         <img loading="lazy" alt="OCD menu"
                                             title="UAE's no. 1 car rental &amp; leasing marketplace"
-                                            src="/public/adpost/images/b1.jpg"
+                                            src="/adpost/images/b1.jpg"
                                             class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
-                                  
+
                                     </div>
                                     <div class="dropdwn-column">
                                         <nav>
@@ -158,9 +158,9 @@
                                         class="p-0 rounded-left dropdwn-column dropdwn-column-img bg-secondary d-none d-lg-block">
                                         <img loading="lazy" alt="OCD menu"
                                             title="UAE's no. 1 car rental &amp; leasing marketplace"
-                                            src="/public/adpost/images/y1.jpg"
+                                            src="/adpost/images/y1.jpg"
                                             class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
-                                        
+
                                     </div>
                                     <div class="dropdwn-column">
                                         <nav>
@@ -193,7 +193,7 @@
                                         class="p-0 rounded-left dropdwn-column dropdwn-column-img bg-secondary d-none d-lg-block">
                                         <img loading="lazy" alt="OCD menu"
                                             title="UAE's no. 1 car rental &amp; leasing marketplace"
-                                            src="/public/adpost/images/t4.jpg"
+                                            src="/adpost/images/t4.jpg"
                                             class="img-fluid rounded-left attachment-large size-large mnu-img-lft">
                                         <aside class="desktop-app">
                                             <!-- new changes start -->
@@ -240,7 +240,7 @@
                         </p>
                     </div>
                 </div>
-            
+
                 <div class="col-md-3">
                     <div class="footer_text">
                         <div class="footer_heading">

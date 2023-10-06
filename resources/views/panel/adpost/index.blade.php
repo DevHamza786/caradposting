@@ -6,7 +6,6 @@
         <div class="card-toolbar d-flex justify-content-between">
             <h1 class="anchor fw-bolder mb-5 px-4">Ads Posted</h1>
             <!--begin::Toolbar-->
-            @hasrole('customer')
             <div class="d-flex px-6" data-kt-user-table-toolbar="base">
                 <!--begin::Add user-->
                 <a href="{{ route('ad-post.create') }}" class="btn btn-primary">
@@ -14,7 +13,6 @@
                 </a>
                 <!--end::Add user-->
             </div>
-            @endhasrole
             <!--end::Toolbar-->
         </div>
         <!--end::Card toolbar-->

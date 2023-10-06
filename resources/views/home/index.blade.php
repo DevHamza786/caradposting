@@ -27,7 +27,7 @@
                                                     <img
                                                     class="MuiBox-root css-19rsff" alt="Search"
                                                     src="/home/assets/images/search.svg">
-                                            
+
                                             </div>
                                         </div>
                                     </div>
@@ -36,7 +36,7 @@
                         </div>
                         <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2 MuiGrid-grid-md-2 css-11w2184"><button
                                 class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-nzmd8g"
-                                tabindex="0" type="button" data-testid="search-button">Search 
+                                tabindex="0" type="button" data-testid="search-button">Search
                                 <img class="MuiBox-root css-19rsff nones" alt="Search" src="/home/assets/images/search.svg"></button></div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/c7.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/c7.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -112,7 +112,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/b1.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/b1.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -156,7 +156,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/y1.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/y1.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -200,7 +200,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/t1.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/t1.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -273,7 +273,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/c7.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/c7.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -317,7 +317,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/car1.jpeg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/car1.jpeg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -361,7 +361,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/car1.jpeg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/car1.jpeg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -405,7 +405,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/car2.jpeg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/car2.jpeg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -479,7 +479,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/b1.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/b1.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -523,7 +523,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/b2.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/b2.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -567,7 +567,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/b3.png" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/b3.png" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -611,7 +611,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/b4.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/b4.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -685,7 +685,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/y1.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/y1.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -729,7 +729,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/y2.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/y2.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -773,7 +773,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/y3.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/y3.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -817,7 +817,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/y4.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/y4.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -894,7 +894,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/t1.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/t1.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -938,7 +938,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/t2.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/t2.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -982,7 +982,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/t3.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/t3.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
@@ -1026,7 +1026,7 @@
                 <div class="g-4 col-lg-3 col-md-6 col-12">
                     <div class="border border-secondary h-100 rounded overflow-hidden">
                         <div class="position-relative">
-                            <img src="/public/adpost/images/t4.jpg" class="w-100 border-bottom border-secondary"
+                            <img src="/adpost/images/t4.jpg" class="w-100 border-bottom border-secondary"
                                 style="aspect-ratio: 1.5 / 1; cursor: pointer; object-fit: cover; object-position: center center;">
                             <div class="car-time-and-price d-flex"></div>
                         </div>
