@@ -46,7 +46,7 @@ Route::get('/facebook/redirect', [LoginController::class,'redirectToFacebook'])-
 Route::get('/google/callback', [LoginController::class,'handleProviderCallback'])->name('callback');
 Route::get('facebook/callback', [LoginController::class,'handleFacebookCallback'])->name('callback.facebook');
 
-Route::group(['middleware' => ['auth', 'verifyUser']], function () {
+Route::group(['middleware' => ['auth']], function () {
     Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
 
     Route::get('/profile', [ProfileController::class,'index'])->name('profile');
@@ -74,13 +74,16 @@ Route::group(['middleware' => ['auth', 'verifyUser']], function () {
 
     Route::get('/admin/adpost', [AdPostController::class,'adminIndex'])->name('adpost.admin');
     Route::get('/admin/edit-adpost/{id}', [AdPostController::class,'adpostStatus'])->name('adpost.edit');
-    Route::post('/admin/update-adpost', [AdPostController::class,'adpoststatusUpdate'])->name('adpost.update');
+    Route::post('/admin/adpost-approval', [AdPostController::class,'adpostapprovalUpdate'])->name('adpost.approval');
+    Route::post('/admin/adpost-status', [AdPostController::class,'adpoststatusUpdate'])->name('adpost.statusupdate');
 
-    Route::get('/ad-post', [AdPostController::class,'index'])->name('ad-post');
-    Route::get('/ad-post-create', [AdPostController::class,'create'])->name('ad-post.create');
-    Route::post('/ad-post-store', [AdPostController::class,'store'])->name('ad-post.store');
-    Route::get('/ad-post-edit', [AdPostController::class,'edit'])->name('ad-post.edit');
-    Route::post('/ad-post-update', [AdPostController::class,'update'])->name('ad-post.update');
+    Route::group(['middleware' => ['role:customer']], function (){
+        Route::group(['middleware' => ['verifyUser']], function (){
+            Route::get('/ad-post', [AdPostController::class,'index'])->name('ad-post');
+            Route::get('/ad-post-create', [AdPostController::class,'create'])->name('ad-post.create');
+            Route::post('/ad-post-store', [AdPostController::class,'store'])->name('ad-post.store');
+            Route::get('/ad-post-edit', [AdPostController::class,'edit'])->name('ad-post.edit');
+            Route::post('/ad-post-update', [AdPostController::class,'update'])->name('ad-post.update');
+        });
+    });
 });
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

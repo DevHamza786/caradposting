@@ -6,7 +6,7 @@ use App\Models\AdModel;
 use App\Models\PostType;
 use Illuminate\Http\Request;
 
-class AdModelController extends Controller
+class AdModelController extends BaseController
 {
     public function index(){
 

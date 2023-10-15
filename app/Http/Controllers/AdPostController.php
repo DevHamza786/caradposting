@@ -10,7 +10,7 @@ use App\Models\City;
 use App\Models\PostType;
 use Illuminate\Http\Request;
 
-class AdPostController extends Controller
+class AdPostController extends BaseController
 {
 
     public function adminIndex(){
@@ -27,13 +27,29 @@ class AdPostController extends Controller
 
     }
 
-    public function adpoststatusUpdate(Request $request){
-
-        $data = AdPost::where('id',$request->id)->update([
-            'status' => $request->status
+    public function adpostapprovalUpdate(Request $request)
+    {
+        $data = AdPost::find($request->id)->update([
+            'admin_apporval' => $request->approval,
+            'status' => ($request->approval == 'approved') ? 'active' : 'unactive',
         ]);
         if($data){
-            return redirect('/admin/adpost')->with(['success' => 'Post Status updated successfully']);
+            return redirect('/admin/adpost')->with(['success' => 'Ad Post approval status updated successfully']);
+        }
+
+    }
+
+    public function adpoststatusUpdate(Request $request)
+    {
+        $data = AdPost::find($request->id)->update([
+            'status' => $request->status,
+        ]);
+        if($data){
+            if(auth()->user()->hasrole('customer')){
+                return redirect('/adpost')->with(['success' => 'Ad Post status updated successfully']);
+            }else{
+                return redirect('/admin/adpost')->with(['success' => 'Ad Post status updated successfully']);
+            }
         }
 
     }
@@ -55,11 +71,11 @@ class AdPostController extends Controller
 
         $data['models'] = AdModel::get();
         $data['city'] = City::get();
-        return view('panel.adpost.edit' , $data);
+        return view('panel.adpost.create' , $data);
     }
 
     public function store(Request $request){
-
+        // dd($request->All());
         if($request->file('company_logo')){
             $file= $request->file('company_logo');
             $filename= $file->getClientOriginalName();
@@ -78,6 +94,9 @@ class AdPostController extends Controller
             'user_id' => auth()->user()->id,
             'category_id' => $request->category,
             'model' => $request->model,
+            'age' => $request->age,
+            'driver' => $request->driver,
+            'contactby' => json_encode($request->contactMethod),
             'title' => $request->title,
             'city_id' => $request->city,
             'area_name' => $request->area_name,

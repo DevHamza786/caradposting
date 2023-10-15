@@ -119,7 +119,7 @@
                                 <select name="type" aria-label="Select a Type" data-control="select2"
                                     data-placeholder="Select a Type..."
                                     class="form-select form-select-solid fw-bolder select2-hidden-accessible" tabindex="-1"
-                                    aria-hidden="true" id="getTypeid">
+                                    aria-hidden="true" id="getTypeid" required>
                                     <option value="">Select a Type...</option>
                                     @foreach ($type as $data)
                                         <option value="{{ $data->id }}" data-id="{{ $data->id }}">
@@ -140,7 +140,7 @@
                                 <select name="category" aria-label="Select a Category" data-control="select2"
                                     data-placeholder="Select a Category..."
                                     class="form-select form-select-solid fw-bolder select2-hidden-accessible" tabindex="-1"
-                                    aria-hidden="true" id="categorybyType">
+                                    aria-hidden="true" id="categorybyType" required>
                                     <option value="">Select a Category...</option>
                                 </select>
 
@@ -157,7 +157,7 @@
                                 <select name="model" aria-label="Select a Model" data-control="select2"
                                     data-placeholder="Select a Model..."
                                     class="form-select form-select-solid fw-bolder select2-hidden-accessible" tabindex="-1"
-                                    aria-hidden="true" id="ModelbyType">
+                                    aria-hidden="true" id="ModelbyType" required>
                                     <option value="">Select a Model...</option>
                                 </select>
 
@@ -167,7 +167,30 @@
                         </div>
 
                         <div class="row">
-                            <div class="d-flex flex-column col-6 mb-7 fv-row fv-plugins-icon-container">
+                            <div class="d-flex flex-column col-4 mb-7 fv-row fv-plugins-icon-container">
+                                <!--begin::Label-->
+                                <label class="required fs-6 fw-bold mb-2">Minimum Age
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <input type="number" min="0" max="99" class="form-control form-control-solid" placeholder="Minimum Age" name="age"
+                                    value="" required>
+                                <!--end::Input-->
+                                <div class="fv-plugins-message-container invalid-feedback"></div>
+                            </div>
+                            <div class="d-flex flex-column col-4 mb-7 fv-row fv-plugins-icon-container">
+                                <!--begin::Label-->
+                                <label class="required fs-6 fw-bold mb-2">Region
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Input-->
+                                <input class="form-control form-control-solid" placeholder="Select Region" name="area_name"
+                                    value="" required>
+                                <!--end::Input-->
+                                <div class="fv-plugins-message-container invalid-feedback"></div>
+                            </div>
+
+                            <div class="d-flex flex-column col-4 mb-7 fv-row fv-plugins-icon-container">
                                 <!--begin::Label-->
                                 <label class="fs-6 fw-bold mb-2">
                                     <span class="required">City</span>
@@ -177,25 +200,13 @@
                                 <select name="city" aria-label="Select a City" data-control="select2"
                                     data-placeholder="Select a City..."
                                     class="form-select form-select-solid fw-bolder select2-hidden-accessible" tabindex="-1"
-                                    aria-hidden="true">
+                                    aria-hidden="true" required>
                                     <option value="">Select a City...</option>
                                     @foreach ($city as $citydata)
                                         <option value="{{ $citydata->id }}">{{ $citydata->name }}</option>
                                     @endforeach
                                 </select>
                                 <!--end::Input-->
-                            </div>
-
-                            <div class="d-flex flex-column col-6 mb-7 fv-row fv-plugins-icon-container">
-                                <!--begin::Label-->
-                                <label class="required fs-6 fw-bold mb-2">Area Name
-                                </label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
-                                <input class="form-control form-control-solid" placeholder="" name="area_name"
-                                    value="" required>
-                                <!--end::Input-->
-                                <div class="fv-plugins-message-container invalid-feedback"></div>
                             </div>
                         </div>
 
@@ -207,7 +218,7 @@
                                 </label>
                                 <!--end::Label-->
                                 <!--begin::Input-->
-                                <input type="number" class="form-control form-control-solid" placeholder=""
+                                <input type="number" class="form-control form-control-solid" placeholder="Price Per Day"
                                     name="price_per_day" value="" required>
                                 <!--end::Input-->
                                 <div class="fv-plugins-message-container invalid-feedback"></div>
@@ -221,8 +232,8 @@
                                 </label>
                                 <!--end::Label-->
                                 <!--begin::Input-->
-                                <input type="number" class="form-control form-control-solid" placeholder=""
-                                    name="price_per_week" value="">
+                                <input type="number" class="form-control form-control-solid" placeholder="Price Per Week"
+                                    name="price_per_week" value="" required>
                                 <!--end::Input-->
                                 <div class="fv-plugins-message-container invalid-feedback"></div>
                             </div>
@@ -235,8 +246,8 @@
                                 </label>
                                 <!--end::Label-->
                                 <!--begin::Input-->
-                                <input type="number" class="form-control form-control-solid" placeholder=""
-                                    name="price_per_month" value="">
+                                <input type="number" class="form-control form-control-solid" placeholder="Price Per Month"
+                                    name="price_per_month" value="" required>
                                 <!--end::Input-->
                                 <div class="fv-plugins-message-container invalid-feedback"></div>
                             </div>
@@ -252,7 +263,7 @@
                             </label>
                             <!--end::Label-->
                             <!--begin::Input-->
-                            <textarea type="text" class="form-control form-control-solid" placeholder="" name="description"></textarea>
+                            <textarea type="text" class="form-control form-control-solid" placeholder="" name="description" required></textarea>
                             <!--end::Input-->
                         </div>
                         <!--end::Input group-->
@@ -285,6 +296,22 @@
                             <!--end::Input-->
                         </div>
                         <!--end::Input group-->
+                        <div class="fv-row mb-7">
+                            <label class="fs-6 fw-bold mb-2">
+                                <span class="required">Contact By</span>
+                            </label>
+                            <div class="form-check form-check-custom form-check-solid">
+                                <input class="form-check-input" type="checkbox" value="phone" name="contactMethod[]"/>
+                                <label class="fw-bold form-check-label  mx-4">
+                                    Phone Number
+                                </label>
+                                <input class="form-check-input" type="checkbox" value="chat" name="contactMethod[]"/>
+                                <label class="fw-bold form-check-label mx-4">
+                                    Whatsapp Chat
+                                </label>
+                            </div>
+                            <div class="alert" id="contact-alert"></div>
+                        </div>
 
                         <!--begin::Billing toggle-->
                         <div class="fw-bolder fs-3 rotate collapsible mb-7" data-bs-toggle="collapse"
@@ -308,7 +335,7 @@
                         <div id="kt_modal_add_customer_billing_info" class="collapse show">
                             <!--begin::Input group-->
                             <div class="row">
-                                <div class="d-flex flex-column col-6 mb-7 fv-row fv-plugins-icon-container">
+                                <div class="d-flex flex-column col-4 mb-7 fv-row fv-plugins-icon-container">
                                     <!--begin::Label-->
                                     <label class="fs-6 fw-bold mb-2">Name</label>
                                     <!--end::Label-->
@@ -320,7 +347,7 @@
                                 </div>
                                 <!--end::Input group-->
                                 <!--begin::Input group-->
-                                <div class="d-flex flex-column col-6 mb-7 fv-row fv-plugins-icon-container">
+                                <div class="d-flex flex-column col-4 mb-7 fv-row fv-plugins-icon-container">
                                     <!--begin::Label-->
                                     <label class="fs-6 fw-bold mb-2">Logo</label>
                                     <!--end::Label-->
@@ -331,6 +358,21 @@
                                     <!--end::Input-->
                                 </div>
                                 <!--end::Input group-->
+                                <div class="d-flex flex-column col-4 mb-7 fv-row fv-plugins-icon-container">
+                                    <!--begin::Label-->
+                                    <label class="fs-6 fw-bold mb-2">
+                                        <span class="required">With Driver</span>
+                                    </label>
+                                    <!--end::Label-->
+                                    <!--begin::Input-->
+                                    <select name="driver"
+                                        class="form-select form-select-solid fw-bolder" required>
+                                        <option value="">-- Chose One --</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                    <!--end::Input-->
+                                </div>
                             </div>
                         </div>
                         <!--end::Billing form-->
@@ -485,7 +527,6 @@
             }
         });
 
-        // For relative images
         // Your JavaScript code
         $('input[name="images[]"]').on('change', function() {
             var input = $(this)[0];
@@ -548,5 +589,26 @@
                 }
             }
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+        // Get both checkboxes
+        const checkboxes = document.querySelectorAll('input[name="contactMethod"]');
+        const contactAlert = document.getElementById('contact-alert');
+
+        // Add an event listener to the checkboxes
+        checkboxes.forEach(function (checkbox) {
+            checkbox.addEventListener("change", function () {
+                // Check if at least one checkbox is checked
+                const atLeastOneChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+
+                // Show an error message if no checkbox is checked
+                if (!atLeastOneChecked) {
+                    contactAlert.innerHTML = "<p class='text-danger'>Please select at least one contact method.</p>";
+                } else {
+                    contactAlert.innerHTML = ""; // Clear the error message
+                }
+            });
+        });
+    });
     </script>
 @endsection

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\AdPost;
 use App\Models\PostType;
 
-class HomeController extends Controller
+class HomeController extends BaseController
 {
     /**
      * Create a new controller instance.
@@ -34,8 +34,8 @@ class HomeController extends Controller
 
     public function cat()
     {
-        $users = AdPost::limit(6)->get();
-        return view('home.categorypage', compact('users'));
+        $adpost = AdPost::limit(6)->get();
+        return view('home.categorypage', compact('adpost'));
     }
 
     public function alladds($type)

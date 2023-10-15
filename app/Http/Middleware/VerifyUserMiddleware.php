@@ -17,7 +17,7 @@ class VerifyUserMiddleware
 
     public function handle(Request $request, Closure $next): Response
     {
-        if (!auth()->user()->phone && auth()->user()->hasrole('custome')) {
+        if (!auth()->user()->phone) {
             return redirect('profile');
         }
         return $next($request);

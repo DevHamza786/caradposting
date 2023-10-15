@@ -41,7 +41,7 @@
                     <th>Price</th>
                     <th>Is Premium?</th>
                     <th>Status</th>
-                    <th>Admin Approval</th>
+                    <th>Approval</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -75,9 +75,9 @@
                     <td>
                         @if ($data->admin_apporval == 'pending')
                         <span class="badge badge-light-warning">Pending</span>
-                        @elseif($data->status == 'apporved')
+                        @elseif($data->admin_apporval == 'approved')
                         <span class="badge badge-light-success">Approved</span>
-                        @elseif($data->status == 'rejected')
+                        @elseif($data->admin_apporval == 'rejected')
                         <span class="badge badge-light-danger">Rejected</span>
                         @endif
                     </td>
@@ -85,12 +85,26 @@
                     <td>
                         <i class="bi bi-pencil-square text-success" style="font-size:16px !important"></i>
                         <i class="bi bi-trash px-4 text-danger" style="font-size:16px !important"></i>
+                        @if($data->admin_apporval == 'approved')
+                        <button class="btn btn-secondary p-2 post_status" data-id="{{ $data->id }}">
+                            <i class="bi bi-power px-2 text-dark"
+                                style="font-size:18px !important"></i>
+                        </button>
+                    @endif
                     </td>
                     @endhasrole
                     @hasrole('admin')
                     <td>
-                        <i class="bi bi-clipboard-plus p-6 text-success post_status" data-id="{{ $data->id }}"
-                            style="font-size:16px !important"></i>
+                        <button class="btn btn-primary p-2 post_approval" data-id="{{ $data->id }}">
+                            <i class="bi bi-clipboard-plus px-2 text-white"
+                                style="font-size:18px !important"></i>
+                        </button>
+                        @if($data->admin_apporval == 'approved')
+                            <button class="btn btn-secondary p-2 post_status" data-id="{{ $data->id }}">
+                                <i class="bi bi-power px-2 text-dark"
+                                    style="font-size:18px !important"></i>
+                            </button>
+                        @endif
                     </td>
                     @endhasrole
                 </tr>
@@ -99,11 +113,74 @@
         </table>
     </div>
 </div>
+<div class="modal fade" tabindex="-1" id="kt_modal_add_status">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Update Ad Post Approval</h3>
+
+                <!--begin::Close-->
+                <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x-lg text-dark"></i>
+                </div>
+                <!--end::Close-->
+            </div>
+
+            <form action="{{ route('adpost.approval') }}" method="POST">
+                @csrf
+            <div class="modal-body">
+                    <input name="id" id="adpost_id" type="hidden" value=""/>
+                    <select class="form-select form-select-solid fw-bolder" name="approval" id="adpost_approval" required>
+                        <option value="">-- Chose One --</option>
+                        <option value="rejected">Rejected</option>
+                        <option value="pending">Pending</option>
+                        <option value="approved">Approved</option>
+                    </select>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="kt_modal_ad_status">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Update Ad Post Status</h3>
+
+                <!--begin::Close-->
+                <div class="btn btn-icon btn-sm btn-active-light-primary ms-2" data-bs-dismiss="modal" aria-label="Close">
+                    <i class="bi bi-x-lg text-dark"></i>
+                </div>
+                <!--end::Close-->
+            </div>
+
+            <form action="{{ route('adpost.statusupdate') }}" method="POST">
+                @csrf
+            <div class="modal-body">
+                    <input name="id" id="adpost_status_id" type="hidden" value=""/>
+                    <select class="form-select form-select-solid fw-bolder" name="status" id="adpost_status" required>
+                        <option value="">-- Chose One --</option>
+                        <option value="active">Active</option>
+                        <option value="unactive">Unactive</option>
+                    </select>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 @endsection
 @section('script_page')
 <script>
-$('.post_status').click(function() {
-    alert('dasd');
+$('.post_approval').click(function() {
     var id = $(this).data('id');
     $.ajax({
         url: '/admin/edit-adpost/' + id,
@@ -112,6 +189,25 @@ $('.post_status').click(function() {
         success: function(data) {
             $('#kt_modal_add_status').modal('show');
             $('#adpost_id').val(data.id);
+            $("#adpost_approval option").each(function() {
+                if ($(this).val() == data.admin_apporval) {
+                    $(this).prop("selected", true);
+                }
+            });
+
+        }
+    });
+});
+
+$('.post_status').click(function() {
+    var id = $(this).data('id');
+    $.ajax({
+        url: '/admin/edit-adpost/' + id,
+        type: 'GET',
+        dataType: 'json',
+        success: function(data) {
+            $('#kt_modal_ad_status').modal('show');
+            $('#adpost_status_id').val(data.id);
             $("#adpost_status option").each(function() {
                 if ($(this).val() == data.status) {
                     $(this).prop("selected", true);
